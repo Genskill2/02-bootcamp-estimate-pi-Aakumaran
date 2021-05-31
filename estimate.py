@@ -11,12 +11,12 @@ def wallis(n):
 	return result
 	
 def monte_carlo(n):
+	circle = 0
+	square = 0
 	for i in range(n):
 		x,y = random.random(), random.random()
-		circle = 0
-		square = 0
 		# Distance
-		dist = math.sqrt(x**2 + y**2)
+		dist = math.sqrt((x**2) + (y**2))
 		if dist <= 1:
 			circle += 1
 			square += 1
